@@ -1,0 +1,14 @@
+{% macro beginField(fieldName, errors) %}
+    {% if errors[fieldName] %}
+        <div class="form-group has-error">
+    {% else %}
+        <div class="form-group">
+    {% endif %}
+{% endmacro %}
+
+{% macro endField(fieldName, errors) %}
+    {% if errors[fieldName] %}
+        <span class="help-block">{{ errors[fieldName][0] }}</span>
+    {% endif %}
+    </div>
+{% endmacro %}

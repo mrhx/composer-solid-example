@@ -1,0 +1,31 @@
+{
+    "name": "mrhx/composer-solid-example",
+    "description": "Example of composer-based SOLID application",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Karpov",
+            "email": "mrhx.me@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^1.26",
+        "league/container": "^2.2",
+        "league/route": "^2.0",
+        "zendframework/zend-diactoros": "^1.3",
+        "twig/extensions": "^1.4",
+        "umpirsky/country-list": "^2.0",
+        "vlucas/valitron": "^1.2",
+        "aura/session": "^2.1",
+        "fpdo/fluentpdo": "^1.1"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}

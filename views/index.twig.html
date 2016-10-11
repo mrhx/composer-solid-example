@@ -1,0 +1,27 @@
+{% extends "layout.twig.html" %}
+{% import "lib.twig.html" as lib %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well">
+                <form action="" method="post">
+
+                    {{ lib.beginField("email", errors) }}
+                        <label for="login-email">{{ "Email" | trans }}</label>
+                        <input type="email" class="form-control" id="login-email" maxlength="100"
+                            name="email" value="{{ formData.email }}">
+                    {{ lib.endField("email", errors) }}
+
+                    {{ lib.beginField("password", errors) }}
+                        <label for="login-password">{{ "Password" | trans }}</label>
+                        <input type="password" class="form-control" id="login-password"
+                            name="password" value="{{ formData.password }}">
+                    {{ lib.endField("password", errors) }}
+
+                    <button type="submit" class="btn btn-primary" name="login">{{ "Login" | trans }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
